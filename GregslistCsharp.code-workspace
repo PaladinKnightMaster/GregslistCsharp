@@ -1,0 +1,68 @@
+{
+  "folders": [
+    {
+      "path": "GregslistCsharp.client",
+      "name": "client"
+    },
+    {
+      "path": "GregslistCsharp",
+      "name": "server"
+    },
+    {
+      "path": ".github/workflows",
+      "name": "workflows"
+    },
+    {
+      "name": "GregslistCsharp",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.suggestSelection": "first",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.referencesCodeLens.showOnAllFunctions": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.referencesCodeLens.showOnAllFunctions": true,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "files.exclude": {
+      "**/.nyc_*": true,
+      "**/coverage": true,
+      "**/node_modules": true
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "vetur.format.defaultFormatter.js": "vscode-typescript",
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.codeActionsOnSave.mode": "all",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#1a5745",
+      "activityBar.background": "#1a5745",
+      "activityBar.foreground": "#e7e7e7",
+      "activityBar.inactiveForeground": "#e7e7e799",
+      "activityBarBadge.background": "#270f31",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "panel.border": "#1a5745",
+      "sash.hoverBorder": "#1a5745",
+      "sideBar.border": "#1a5745",
+      "statusBar.background": "#0e3026",
+      "statusBar.border": "#0e3026",
+      "statusBar.debuggingBackground": "#300e18",
+      "statusBar.debuggingBorder": "#300e18",
+      "statusBar.debuggingForeground": "#e7e7e7",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#1a5745",
+      "statusBarItem.remoteBackground": "#0e3026",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "tab.activeBorder": "#1a5745"
+    }
+  }
+}
