@@ -18,8 +18,8 @@ public class CarsRepository
   public Car GetCarById(int id)
   {
     var Id = id;
-    var sql = $"SELECT * FROM cars WHERE id = {Id}";
-    return _db.QuerySingle<Car>(sql);
+    var sql = "SELECT * FROM cars WHERE id = @id";
+    return _db.QuerySingle<Car>(sql, new { id });
   }
 
   public Car PostCar(Car carData)
@@ -38,8 +38,8 @@ public class CarsRepository
   {
     var car = this.GetCarById(id);
     var Id = id;
-    var sql = $"DELETE FROM cars WHERE id = {Id};";
-    _db.Execute(sql);
+    var sql = "DELETE FROM cars WHERE id = @id;";
+    _db.Execute(sql, new { id });
     return car;
   }
 
