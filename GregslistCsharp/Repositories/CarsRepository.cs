@@ -28,11 +28,33 @@ public class CarsRepository
     (make, model, year, price, description, imgUrl)
       VALUES
     (@Make, @Model, @Year, @Price, @Description, @ImgUrl);
-      SELECT LAST_INSERT_ID
+      SELECT LAST_INSERT_ID();
     ";
     carData.id = _db.ExecuteScalar<int>(sql, carData);
     return carData;
   }
 
+  public Car RemoveCar(int id)
+  {
+    var car = this.GetCarById(id);
+    var Id = id;
+    var sql = $"DELETE FROM cars WHERE id = {Id};";
+    _db.Execute(sql);
+    return car;
+  }
 
+  public Car GetCarColName(int id)
+  {
+    var Id = id;
+    var sql = $"SELECT name FROM cars WHERE id = {Id}";
+    return _db.QuerySingle<Car>(sql);
+  }
+
+  public Car EditCar(int id, Car carData)
+  {
+    var colName = this.GetCarColName(id);
+    var sql = $"ALTER TABLE cars CHANGE {colName} {colName} VALUES (@Make, @Model, @Year, @Price, @Description, @ImgUrl)";
+    _db.Execute(sql, carData);
+    return carData;
+  }
 }

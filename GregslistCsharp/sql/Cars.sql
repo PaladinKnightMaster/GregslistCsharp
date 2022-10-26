@@ -32,3 +32,7 @@ VALUES (
 SELECT * FROM cars;
 
 SELECT * FROM cars WHERE id = 2;
+
+DELETE FROM cars WHERE id = 2;
+
+CHANGE FROM cars WHERE id 

@@ -23,4 +23,14 @@ public class CarsService
   {
     return _carsRepo.PostCar(carData);
   }
+
+  public Car RemoveCar(int Id)
+  {
+    return _carsRepo.RemoveCar(Id);
+  }
+
+  public Car EditCar(int id, Car carData)
+  {
+    return _carsRepo.EditCar(id, carData);
+  }
 }
