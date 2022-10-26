@@ -45,17 +45,16 @@ public class CarsRepository
 
   public Car GetCarColName(int id)
   {
-    var Id = id;
-    var sql = $"SELECT name FROM cars WHERE id = {Id}";
-    var colName = _db.QuerySingle<Car>(sql);
+    var sql = "SELECT name FROM cars WHERE id = @id";
+    var colName = _db.QuerySingle<Car>(sql, new { id });
     return colName;
   }
 
   public Car EditCar(int id, Car carData)
   {
     var colName = this.GetCarColName(id);
-    var sql = $"ALTER TABLE cars CHANGE {colName} {colName} VALUES (@Make, @Model, @Year, @Price, @Description, @ImgUrl)";
-    _db.Execute(sql, carData);
+    // var sql = "ALTER TABLE cars CHANGE @colName @colName VALUES (@Make, @Model, @Year, @Price, @Description, @ImgUrl)";
+    // _db.Execute(sql ,new {colName}, carData);
     return carData;
   }
 }
