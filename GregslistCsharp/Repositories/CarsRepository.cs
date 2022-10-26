@@ -47,7 +47,8 @@ public class CarsRepository
   {
     var Id = id;
     var sql = $"SELECT name FROM cars WHERE id = {Id}";
-    return _db.QuerySingle<Car>(sql);
+    var colName = _db.QuerySingle<Car>(sql);
+    return colName;
   }
 
   public Car EditCar(int id, Car carData)
