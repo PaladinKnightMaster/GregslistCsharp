@@ -17,7 +17,6 @@ public class CarsRepository
 
   public Car GetCarById(int id)
   {
-    var Id = id;
     var sql = "SELECT * FROM cars WHERE id = @id";
     return _db.QuerySingle<Car>(sql, new { id });
   }
